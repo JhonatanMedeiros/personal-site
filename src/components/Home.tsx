@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
 
-// import cvFile from '../../assets/images/cv.webp';
 import userImage from 'public/my-profile.jpg';
 
 const HomePage = () => {
@@ -51,7 +50,7 @@ const HomePage = () => {
 				{/* Social information start */}
 
 				<Link
-					href="https://bostamireact.ibthemespro.com/static/media/cv.174d8bc4469f8aa7c5fa.webp"
+					href="cv.pdf"
 					download
 				>
 					<a className="flex items-center bg-[#4D4D4D] px-8 py-3 text-lg text-white rounded-[35px] mt-6 hover:text-black transition-all duration-300 ease-in-out">
