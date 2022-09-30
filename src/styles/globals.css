@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  overflow: hidden;
+}
+
+@layer components {
+  .social-btn {
+    align-items: center;
+    border-radius: .5rem;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    width: 2.5rem;
+  }
+}
