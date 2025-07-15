@@ -2,8 +2,6 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
 
-import userImage from 'public/my-profile.jpg';
-
 const HomePage = () => {
 	return (
 		<>
@@ -13,7 +11,7 @@ const HomePage = () => {
 			>
 				<div className="relative w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]">
 					<Image
-						src={userImage}
+						src="/my-profile.jpg"
 						alt=""
 						layout="fill"
 						objectFit="cover"
