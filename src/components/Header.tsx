@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import useDataContext from '../Hooks/UseData';
+import { MenuItem } from '../Context/ContextProvider';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const { handleTheme, check, menuItem } = useDataContext() as any;
-
-	const handle = (e: any) => {
-		handleTheme(e);
+	const { handleTheme, check, menuItem } = useDataContext();
+	const handle = (theme: string) => {
+		handleTheme(theme);
 	};
 
 	return (
@@ -69,7 +69,7 @@ const Header = () => {
 									: 'flex my-12 '
 							}`}
 						>
-							{menuItem.map((item: any) => (
+							{menuItem.map((item: MenuItem) => (
 								<li
 									onClick={() => setMenuOpen(false)}
 									key={item.id}

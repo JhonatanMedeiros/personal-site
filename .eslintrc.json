@@ -6,7 +6,7 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:react/recommended",
-    "standard-with-typescript"
+    "plugin:@typescript-eslint/recommended"
   ],
   "settings": {
     "react": {

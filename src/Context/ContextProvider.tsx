@@ -1,10 +1,24 @@
-import { createContext } from 'react';
+import { createContext, ReactNode } from 'react';
 
 import AllData from '../Hooks/AllData';
 
-export const MyContext = createContext({});
+export interface MenuItem {
+	id: string;
+	name: string;
+	link: string;
+	icon: ReactNode;
+}
 
-const ContextProvider = ({ children }: any) => {
+export interface DataContextType {
+	check: boolean;
+	local: string;
+	handleTheme: (value: string) => void;
+	menuItem: MenuItem[];
+}
+
+export const MyContext = createContext<DataContextType | null>(null);
+
+const ContextProvider = ({ children }: { children: React.ReactNode }) => {
 	const value = AllData();
 	return (
 		<MyContext.Provider value={value}>

@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { MyContext } from '../Context/ContextProvider';
+import { MyContext, DataContextType } from '../Context/ContextProvider';
 
 const useDataContext = () => {
-	return useContext(MyContext);
+	return useContext(MyContext) as DataContextType;
 };
 
 export default useDataContext;
