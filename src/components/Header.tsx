@@ -13,8 +13,8 @@ const Header = () => {
 	};
 
 	return (
-		<div className="z-50 ">
-			<div className="container">
+        <div className="z-50 ">
+            <div className="container">
 				{/* Header menu start  */}
 				<header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
 					<div className=" flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] dark:bg-black lg:!bg-transparent">
@@ -76,17 +76,17 @@ const Header = () => {
 									className=" "
 								>
 									<Link
-										key={item.id}
-										href={item?.link}
-									>
-										<a className={`
+                                        key={item.id}
+                                        href={item?.link}
+                                        className={`
 											${menuOpen ? 'pl-4' : 'dark:bg-[#212425] rounded-md bg-white text-gray-lite'}
 											text-black dark:text-white hover:!text-gray-600 font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out`
 										}>
-											<span className="mr-2 text-xl">{item?.icon}</span>{' '}
-											{item?.name}
-										</a>
-									</Link>
+
+                                        <span className="mr-2 text-xl">{item?.icon}</span>{' '}
+                                        {item?.name}
+
+                                    </Link>
 								</li>
 							))}
 
@@ -115,8 +115,8 @@ const Header = () => {
 				</header>
 				{/* Header menu End  */}
 			</div>
-		</div>
-	);
+        </div>
+    );
 };
 
 export default Header;
