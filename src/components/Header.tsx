@@ -16,8 +16,8 @@ const Header = () => {
 		<div className="z-50 ">
 			<div className="container">
 				{/* Header menu start  */}
-				<header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
-					<div className=" flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] dark:bg-black lg:!bg-transparent">
+				<header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-1111111111">
+					<div className=" flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] dark:bg-black lg:bg-transparent!">
 						<div className="flex justify-end w-full items-center space-x-4 lg:my-8 my-5 ">
 							<div className="flex items-center">
 								{/* dark mode icon */}
@@ -27,7 +27,7 @@ const Header = () => {
 											onClick={() => handle('dark')}
 											className="bg-white w-[40px] opacity-100 visible flex lg:opacity-0 lg:hidden h-[40px] rounded-full justify-center items-center text-black cursor-pointer ml-4"
 										>
-											<FiMoon className="text-3xl text-3xl text-black hover:!text-gray-600 transition-all duration-300 ease-in-out" />
+											<FiMoon className="text-3xl text-3xl text-black hover:text-gray-600! transition-all duration-300 ease-in-out" />
 										</span>
 									)
 									: (
@@ -35,7 +35,7 @@ const Header = () => {
 											onClick={() => handle('light')}
 											className="bg-[#4D4D4D] w-[40px] h-[40px] rounded-full  opacity-100 visible flex lg:opacity-0 lg:hidden justify-center items-center transition-all duration-300 ease-in-out cursor-pointer  ml-4"
 										>
-											<FiSun className="text-white text-3xl hover:!text-gray-600 text-3xl transition-all duration-300 ease-in-out" />
+											<FiSun className="text-white text-3xl hover:text-gray-600! text-3xl transition-all duration-300 ease-in-out" />
 										</span>
 									)}
 
@@ -65,7 +65,7 @@ const Header = () => {
 						<ul
 							className={`${
 								menuOpen
-									? 'block lg:hidden  absolute left-0 rounded-b-[20px] top-20 z-[22222222222222] w-full bg-white dark:bg-[#1D1D1D] drop-shadow-lg py-4 '
+									? 'block lg:hidden  absolute left-0 rounded-b-[20px] top-20 z-22222222222222 w-full bg-white dark:bg-[#1D1D1D] drop-shadow-lg py-4 '
 									: 'flex my-12 '
 							}`}
 						>
@@ -80,7 +80,7 @@ const Header = () => {
 										href={item?.link}
 										className={`
 											${menuOpen ? 'pl-4' : 'dark:bg-[#212425] rounded-md bg-white text-gray-lite'}
-											text-black dark:text-white hover:!text-gray-600 font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out`
+											text-black dark:text-white hover:text-gray-600! font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out`
 										}>
 
 										<span className="mr-2 text-xl">{item?.icon}</span>{' '}
@@ -97,7 +97,7 @@ const Header = () => {
 										onClick={() => handle('dark')}
 										className="bg-white w-[40px] hidden h-[40px] rounded-full lg:flex justify-center items-center cursor-pointer ml-2 "
 									>
-										<FiMoon className="text-3xl text-black hover:!text-gray-600 transition-all duration-300 ease-in-out" />
+										<FiMoon className="text-3xl text-black hover:text-gray-600! transition-all duration-300 ease-in-out" />
 									</span>
 								)
 								: (
@@ -105,7 +105,7 @@ const Header = () => {
 										onClick={() => handle('light')}
 										className="bg-[#212425] w-[40px] h-[40px] hidden rounded-full lg:flex justify-center items-center cursor-pointer ml-2"
 									>
-										<FiSun className="text-white hover:!text-gray-600 text-3xl transition-all duration-300 ease-in-out" />
+										<FiSun className="text-white hover:text-gray-600! text-3xl transition-all duration-300 ease-in-out" />
 									</span>
 								)}
 						</ul>
