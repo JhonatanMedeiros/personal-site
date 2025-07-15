@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
 
@@ -6,8 +6,8 @@ import userImage from 'public/my-profile.jpg';
 
 const HomePage = () => {
 	return (
-        <>
-            <div
+		<>
+			<div
 				className="flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] justify-center"
 				data-aos="fade"
 			>
@@ -50,17 +50,17 @@ const HomePage = () => {
 				{/* Social information start */}
 
 				<Link
-                    href="cv.pdf"
-                    download
-                    className="flex items-center bg-[#4D4D4D] px-8 py-3 text-lg text-white rounded-[35px] mt-6 hover:text-black transition-all duration-300 ease-in-out">
+					href="cv.pdf"
+					download
+					className="flex items-center bg-[#4D4D4D] px-8 py-3 text-lg text-white rounded-[35px] mt-6 hover:text-black transition-all duration-300 ease-in-out">
 
-                    <FaDownload className="mr-2" />Download CV
-                                        
-                </Link>
+					<FaDownload className="mr-2" />Download CV
+
+				</Link>
 				{/* Download button End */}
 			</div>
-        </>
-    );
+		</>
+	);
 };
 
 export default HomePage;
