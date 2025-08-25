@@ -1,6 +1,7 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
+import { personalData } from '../data/data.tsx';
 
 const HomePage = () => {
 	return (
@@ -11,23 +12,23 @@ const HomePage = () => {
 			>
 				<div className="relative w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]">
 					<Image
-						src="/my-profile.jpg"
-						alt=""
+						src={personalData.profileImage}
+						alt={personalData.name}
 						layout="fill"
 						objectFit="cover"
 						className="rounded-full"
 					/>
 				</div>
 				<h3 className="mt-6 mb-1 text-5xl font-semibold dark:text-white">
-					Jhonatan de Medeiros
+					{personalData.name}
 				</h3>
-				<p className="mb-4 text-[#7B7B7B]">WEB Developer</p>
+				<p className="mb-4 text-[#7B7B7B]">{personalData.title}</p>
 				{/* Avatar Info End */}
 
 				{/* Social information start */}
 				<div className="flex space-x-3">
 					<a
-						href="https://github.com/JhonatanMedeiros"
+						href={personalData.social.github}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -36,7 +37,7 @@ const HomePage = () => {
 						</span>
 					</a>
 					<a
-						href="https://linkedin.com/in/jhonatan-hardt-de-medeiros"
+						href={personalData.social.linkedin}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -48,7 +49,7 @@ const HomePage = () => {
 				{/* Social information start */}
 
 				<Link
-					href="cv.pdf"
+					href={personalData.cv}
 					download
 					className="flex items-center bg-[#4D4D4D] px-8 py-3 text-lg text-white rounded-[35px] mt-6 hover:text-black transition-all duration-300 ease-in-out">
 
