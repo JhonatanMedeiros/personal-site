@@ -8,7 +8,6 @@ const itemVariants = {
 	visible: { y: 0, opacity: 1 },
 };
 
-
 const About = () => {
 	return (
 		<PageWrapper title="Sobre Mim">

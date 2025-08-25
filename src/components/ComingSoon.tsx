@@ -9,7 +9,7 @@ const itemVariants = {
 
 const ComingSoon = ({ title }: { title: string }) => {
 	return (
-		<PageWrapper>
+		<PageWrapper title={title} description={`Página ${title} em construção.`}>
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.h1 variants={itemVariants} className="text-4xl font-bold mb-8 text-gray-800 dark:text-white">{title}</motion.h1>
 				<motion.p variants={itemVariants} className="text-lg text-gray-600 dark:text-gray-300">Em breve...</motion.p>

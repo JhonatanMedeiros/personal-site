@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Header from './Header';
 import Seo from './Seo';
+import React from 'react';
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -15,7 +16,7 @@ const containerVariants = {
 
 
 
-const PageWrapper = ({ children, title, description }) => {
+const PageWrapper = ({ children, title, description }: { children: React.ReactNode; title: string; description?: string }) => {
 	return (
 		<>
 			<Seo title={title} description={description} />

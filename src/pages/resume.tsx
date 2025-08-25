@@ -3,8 +3,8 @@ import { resumeData } from '../data/data';
 import { motion } from 'framer-motion';
 
 const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+	hidden: { y: 20, opacity: 0 },
+	visible: { y: 0, opacity: 1 },
 };
 
 
