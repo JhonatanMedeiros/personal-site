@@ -1,11 +1,6 @@
 @import 'tailwindcss';
 @config "../../tailwind.config.js";
 
-@theme {
-  --bg-image-light: url('/bg-light.jpg');
-  --bg-image-dark: url('/bg-dark.jpg');
-}
-
 @layer base {
   *,
   ::after,
