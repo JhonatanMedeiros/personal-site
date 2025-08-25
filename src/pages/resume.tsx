@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import { resumeData } from '../data/data.tsx';
+import { resumeData } from '../data/data';
 
 const Resume = () => {
 	return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { menuItems } from '../data/data.tsx';
+import { menuItems } from '../data/data';
 
 const AllData = () => {
 	const [check, setCheck] = useState(false);

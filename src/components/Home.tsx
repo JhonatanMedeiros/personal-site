@@ -1,7 +1,7 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
-import { personalData } from '../data/data.tsx';
+import { personalData } from '../data/data';
 
 const HomePage = () => {
 	return (

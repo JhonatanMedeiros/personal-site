@@ -9,7 +9,7 @@ export const personalData = {
 	name: 'Jhonatan Medeiros',
 	title: 'Tech Lead - Front end | Angular | TypeScript | Node',
 	location: 'Florianópolis, Santa Catarina, Brasil',
-	profileImage: '/my-profile.jpg',
+	profileImage: '/profile.jpg',
 	cv: 'cv.pdf',
 	social: {
 		github: 'https://github.com/JhonatanMedeiros',

@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import { aboutData, personalData } from '../data/data.tsx';
+import { aboutData, personalData } from '../data/data';
 
 const About = () => {
 	return (
