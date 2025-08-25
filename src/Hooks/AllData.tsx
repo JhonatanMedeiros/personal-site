@@ -15,7 +15,7 @@ const AllData = () => {
 
 		if (!themeValue) {
 			setCheck(false);
-			localStorage.setItem('theme', 'light');
+			localStorage.setItem('theme', 'dark');
 		} else {
 			themeValue === 'dark' && setCheck(true);
 			themeValue === 'light' && setCheck(false);
