@@ -64,37 +64,37 @@ export const resumeData = {
 export const menuItems = [
 	{
 		id: '01',
-		name: 'Home',
+		name: 'Início',
 		link: '/',
 		icon: <AiOutlineHome />
 	},
 	{
 		id: '02',
-		name: 'About',
+		name: 'Sobre',
 		link: '/about',
 		icon: <FaRegUser />
 	},
 	{
-		id: '06',
-		name: 'Resume',
+		id: '03',
+		name: 'Currículo',
 		link: '/resume',
 		icon: <CgNotes />
 	},
 	// {
-	// 	id: '03',
-	// 	name: 'Works',
+	// 	id: '04',
+	// 	name: 'Projetos',
 	// 	link: '/works',
 	// 	icon: <FiCodesandbox />
 	// },
 	// {
-	// 	id: '04',
-	// 	name: 'Blogs',
+	// 	id: '05',
+	// 	name: 'Blog',
 	// 	link: '/blogs',
 	// 	icon: <FaBlogger />
 	// },
 	// {
-	// 	id: '05',
-	// 	name: 'Contact',
+	// 	id: '06',
+	// 	name: 'Contato',
 	// 	link: '/contact',
 	// 	icon: <RiContactsBookLine />
 	// }
