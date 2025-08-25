@@ -1,8 +1,9 @@
 import { AiOutlineHome } from 'react-icons/ai';
 import { CgNotes } from 'react-icons/cg';
-import { FaBlogger, FaRegUser } from 'react-icons/fa';
-import { FiCodesandbox } from 'react-icons/fi';
-import { RiContactsBookLine } from 'react-icons/ri';
+import { FaRegUser } from 'react-icons/fa';
+// import { FaBlogger, FaRegUser } from 'react-icons/fa';
+// import { FiCodesandbox } from 'react-icons/fi';
+// import { RiContactsBookLine } from 'react-icons/ri';
 
 export const personalData = {
 	name: 'Jhonatan Medeiros',
@@ -79,22 +80,22 @@ export const menuItems = [
 		link: '/resume',
 		icon: <CgNotes />
 	},
-	{
-		id: '03',
-		name: 'Works',
-		link: '/works',
-		icon: <FiCodesandbox />
-	},
-	{
-		id: '04',
-		name: 'Blogs',
-		link: '/blogs',
-		icon: <FaBlogger />
-	},
-	{
-		id: '05',
-		name: 'Contact',
-		link: '/contact',
-		icon: <RiContactsBookLine />
-	}
+	// {
+	// 	id: '03',
+	// 	name: 'Works',
+	// 	link: '/works',
+	// 	icon: <FiCodesandbox />
+	// },
+	// {
+	// 	id: '04',
+	// 	name: 'Blogs',
+	// 	link: '/blogs',
+	// 	icon: <FaBlogger />
+	// },
+	// {
+	// 	id: '05',
+	// 	name: 'Contact',
+	// 	link: '/contact',
+	// 	icon: <RiContactsBookLine />
+	// }
 ];
