@@ -3,15 +3,15 @@ import PageWrapper from '../components/PageWrapper';
 import { aboutData, personalData } from '../data/data';
 import { motion } from 'framer-motion';
 
-
 const itemVariants = {
 	hidden: { y: 20, opacity: 0 },
 	visible: { y: 0, opacity: 1 },
 };
 
+
 const About = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Sobre Mim">
 			<div className="max-w-4xl mx-auto">
 				<motion.h1 variants={itemVariants} className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Sobre Mim</motion.h1>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">

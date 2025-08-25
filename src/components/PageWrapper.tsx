@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Header from './Header';
-import { ReactNode } from 'react';
+import Seo from './Seo';
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -13,9 +13,12 @@ const containerVariants = {
 	},
 };
 
-const PageWrapper = ({ children }: { children: ReactNode }) => {
+
+
+const PageWrapper = ({ children, title, description }) => {
 	return (
 		<>
+			<Seo title={title} description={description} />
 			<Header />
 			<div className="min-h-screen bg-gray-50 dark:bg-gray-800 pt-24">
 				<motion.div

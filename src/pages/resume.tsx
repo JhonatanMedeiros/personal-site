@@ -3,14 +3,14 @@ import { resumeData } from '../data/data';
 import { motion } from 'framer-motion';
 
 const itemVariants = {
-	hidden: { y: 20, opacity: 0 },
-	visible: { y: 0, opacity: 1 },
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
 };
 
 
 const Resume = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Currículo">
 			<div className="max-w-4xl mx-auto">
 				<motion.h1 variants={itemVariants} className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Currículo</motion.h1>
 				<motion.div variants={itemVariants}>
