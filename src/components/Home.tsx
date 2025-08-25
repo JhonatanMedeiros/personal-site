@@ -1,64 +1,88 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaDownload } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import { personalData } from '../data/data';
 
 const HomePage = () => {
+	const containerVariants = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2,
+			},
+		},
+	};
+
+
+	const itemVariants = {
+		hidden: { y: 20, opacity: 0 },
+		visible: { y: 0, opacity: 1 },
+	};
+
+
 	return (
-		<>
-			<div
-				className="flex flex-col items-center min-h-screen justify-center bg-gray-100 dark:bg-gray-800"
-				data-aos="fade"
+		<div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800">
+			<motion.div
+				className="container mx-auto px-4 sm:px-6 lg:px-8"
+				variants={containerVariants}
+				initial="hidden"
+				animate="visible"
 			>
-				<div className="relative w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]">
-					<Image
-						src={personalData.profileImage}
-						alt={personalData.name}
-						layout="fill"
-						objectFit="cover"
-						className="rounded-full"
-					/>
+				<div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+					<motion.div variants={itemVariants} className="relative w-48 h-48 md:w-64 md:h-64">
+						<Image
+							src={personalData.profileImage}
+							alt={personalData.name}
+							priority
+							layout="fill"
+							objectFit="cover"
+							className="rounded-full shadow-lg"
+						/>
+					</motion.div>
+
+					<motion.div variants={itemVariants} className="text-center md:text-left">
+						<h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white">
+							{personalData.name}
+						</h1>
+						<p className="mt-2 text-lg md:text-xl text-gray-600 dark:text-gray-300">
+							{personalData.title}
+						</p>
+
+						<div className="mt-6 flex justify-center md:justify-start space-x-4">
+							<a
+								href={personalData.social.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+							>
+								<FaGithub className="w-8 h-8" />
+							</a>
+							<a
+								href={personalData.social.linkedin}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+							>
+								<FaLinkedinIn className="w-8 h-8" />
+							</a>
+						</div>
+
+						<div className="mt-8">
+							<Link
+								href={personalData.cv}
+								download
+								className="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+							>
+								<FaDownload />
+                                Download CV
+							</Link>
+						</div>
+					</motion.div>
 				</div>
-				<h3 className="mt-6 mb-1 text-5xl font-semibold dark:text-white">
-					{personalData.name}
-				</h3>
-				<p className="mb-4 text-[#7B7B7B]">{personalData.title}</p>
-				{/* Avatar Info End */}
-
-				{/* Social information start */}
-				<div className="flex space-x-3">
-					<a
-						href={personalData.social.github}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span className="social-btn bg-[#4D4D4D] text-white hover:text-black transition-all duration-300 ease-in-out">
-							<FaGithub />
-						</span>
-					</a>
-					<a
-						href={personalData.social.linkedin}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span className="social-btn bg-[#4D4D4D] text-[#0072b1] hover:text-white transition-all duration-300 ease-in-out">
-							<FaLinkedinIn />
-						</span>
-					</a>
-				</div>
-				{/* Social information start */}
-
-				<Link
-					href={personalData.cv}
-					download
-					className="flex items-center bg-[#4D4D4D] px-8 py-3 text-lg text-white rounded-[35px] mt-6 hover:text-black transition-all duration-300 ease-in-out">
-
-					<FaDownload className="mr-2" />Download CV
-
-				</Link>
-				{/* Download button End */}
-			</div>
-		</>
+			</motion.div>
+		</div>
 	);
 };
 

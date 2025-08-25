@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Header from '../components/Header';
 import { aboutData, personalData } from '../data/data';
 
