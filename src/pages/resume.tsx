@@ -1,46 +1,48 @@
-import Header from '../components/Header';
+import PageWrapper from '../components/PageWrapper';
 import { resumeData } from '../data/data';
+import { motion } from 'framer-motion';
+
+const itemVariants = {
+	hidden: { y: 20, opacity: 0 },
+	visible: { y: 0, opacity: 1 },
+};
+
 
 const Resume = () => {
 	return (
-		<>
-			<Header />
-			<div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-				<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-					<div className="max-w-4xl mx-auto">
-						<h1 className="text-4xl font-bold text-center mb-8">Resumo</h1>
-						<div>
-							<h2 className="text-3xl font-bold mb-6">Experiência</h2>
-							{resumeData.experience.map((exp, index) => (
-								<div key={index} className="mb-8">
-									<h3 className="text-2xl font-semibold">{exp.company}</h3>
-									{exp.title && <p className="text-lg font-medium">{exp.title}</p>}
-									<p className="text-md text-gray-500">{exp.period}</p>
-									{exp.description && <p className="text-lg leading-relaxed mt-4">{exp.description}</p>}
-								</div>
-							))}
+		<PageWrapper>
+			<div className="max-w-4xl mx-auto">
+				<motion.h1 variants={itemVariants} className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Currículo</motion.h1>
+				<motion.div variants={itemVariants}>
+					<h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Experiência</h2>
+					{resumeData.experience.map((exp, index) => (
+						<div key={index} className="mb-8 p-4 rounded-lg bg-white dark:bg-gray-700 shadow-sm">
+							<h3 className="text-2xl font-semibold text-gray-800 dark:text-white">{exp.company}</h3>
+							{exp.title && <p className="text-lg font-medium text-blue-600 dark:text-blue-400">{exp.title}</p>}
+							<p className="text-md text-gray-500 dark:text-gray-400">{exp.period}</p>
+							{exp.description && <p className="text-lg leading-relaxed mt-4 text-gray-600 dark:text-gray-300">{exp.description}</p>}
 						</div>
-						<div>
-							<h2 className="text-3xl font-bold mb-6">Formação acadêmica</h2>
-							<div>
-								<h3 className="text-2xl font-semibold">{resumeData.education.institution}</h3>
-								<p className="text-lg font-medium">{resumeData.education.degree}</p>
-							</div>
-						</div>
-						<div className="mt-12">
-							<h2 className="text-3xl font-bold text-center mb-6">Certificações</h2>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								{resumeData.certifications.map((cert, index) => (
-									<div key={index} className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-center">
-										<h3 className="text-xl font-semibold">{cert}</h3>
-									</div>
-								))}
-							</div>
-						</div>
+					))}
+				</motion.div>
+				<motion.div variants={itemVariants} className="mt-12">
+					<h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Formação acadêmica</h2>
+					<div className="p-4 rounded-lg bg-white dark:bg-gray-700 shadow-sm">
+						<h3 className="text-2xl font-semibold text-gray-800 dark:text-white">{resumeData.education.institution}</h3>
+						<p className="text-lg font-medium text-gray-600 dark:text-gray-300">{resumeData.education.degree}</p>
+					</div>
+				</motion.div>
+				<div className="mt-12">
+					<motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">Certificações</motion.h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{resumeData.certifications.map((cert, index) => (
+							<motion.div variants={itemVariants} key={index} className="bg-white dark:bg-gray-700 p-4 rounded-lg text-center shadow-sm">
+								<h3 className="text-xl font-semibold text-gray-800 dark:text-white">{cert}</h3>
+							</motion.div>
+						))}
 					</div>
 				</div>
 			</div>
-		</>
+		</PageWrapper>
 	);
 };
 
