@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import ContextProvider from '../Context/ContextProvider';
 
 function MyApp ({ Component, pageProps }: AppProps) {
@@ -15,6 +15,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
 			</Head>
 			<div className="bg-gray-100 dark:bg-gray-800">
 				<Component {...pageProps} />
+				<SpeedInsights />
 			</div>
 		</ContextProvider>
 	);
