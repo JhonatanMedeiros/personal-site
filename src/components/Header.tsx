@@ -10,7 +10,6 @@ const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const { handleTheme, check, menuItem } = useDataContext();
 
-
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 10) {
@@ -36,6 +35,7 @@ const Header = () => {
 			className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 focus:outline-none ${
 				isScrolled || isOpen ? 'bg-gray-200 dark:bg-gray-700' : 'bg-white/90 dark:bg-gray-800/90'
 			}`}
+			aria-label="Toggle theme"
 		>
 			{check ? (
 				<FiSun className="text-yellow-500 text-xl" />
@@ -75,7 +75,7 @@ const Header = () => {
 						{/* Mobile Menu Button */}
 						<div className="md:hidden flex items-center space-x-4">
 							{themeSwitch}
-							<button onClick={toggleMenu} className="z-50">
+							<button onClick={toggleMenu} className="z-50" aria-label="Toggle mobile menu">
 								<div className="w-6 h-6 flex flex-col justify-around">
 									<motion.span
 										animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 8 : 0 }}

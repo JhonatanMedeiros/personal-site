@@ -15,13 +15,12 @@ const containerVariants = {
 };
 
 
-
 const PageWrapper = ({ children, title, description }: { children: React.ReactNode; title: string; description?: string }) => {
 	return (
 		<>
 			<Seo title={title} description={description} />
 			<Header />
-			<div className="min-h-screen bg-gray-50 dark:bg-gray-800 pt-24">
+			<main className="min-h-screen bg-gray-50 dark:bg-gray-800 pt-24">
 				<motion.div
 					className="container mx-auto px-4 sm:px-6 lg:px-8 py-12"
 					variants={containerVariants}
@@ -30,7 +29,7 @@ const PageWrapper = ({ children, title, description }: { children: React.ReactNo
 				>
 					{children}
 				</motion.div>
-			</div>
+			</main>
 		</>
 	);
 };

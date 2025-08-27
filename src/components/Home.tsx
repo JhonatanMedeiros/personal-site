@@ -21,7 +21,6 @@ const HomePage = () => {
 		visible: { y: 0, opacity: 1 },
 	};
 
-
 	return (
 		<div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800">
 			<motion.div
@@ -56,6 +55,7 @@ const HomePage = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+								aria-label="GitHub profile"
 							>
 								<FaGithub className="w-8 h-8" />
 							</a>
@@ -64,6 +64,7 @@ const HomePage = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+								aria-label="LinkedIn profile"
 							>
 								<FaLinkedinIn className="w-8 h-8" />
 							</a>
